@@ -10,7 +10,7 @@ public class Main {
         Customer c1 = new Customer("Bob Dilan");
         Customer c2 = new Customer("Jon Smith");
 
-
+        //формируются "закрывающие бух. документы" по всем прокатам
         c1.addRental(new Rental(movie2,5));
         c2.addRental(new Rental(movie1,10));
         c1.addRental(new Rental(movie3,4));

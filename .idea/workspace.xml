@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f4f8771-88dd-4392-9245-672abefefb0d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/refactoring001/com/movie/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/refactoring001/com/movie/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/refactoring001/com/movie/Movie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/refactoring001/com/movie/Rental.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/refactoring001.iml" beforeDir="false" afterPath="$PROJECT_DIR$/refactoring001.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/movie/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/movie/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/movie/Movie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/movie/Rental.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movie/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movie/Rental.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,17 +21,17 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/movie/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+            <state relative-caret-position="204">
+              <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Movie.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Movie.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/movie/Movie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="289">
+              <caret line="53" column="17" lean-forward="true" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
               <folding>
                 <element signature="e#431#432#0" expanded="true" />
                 <element signature="e#460#461#0" expanded="true" />
@@ -58,31 +49,30 @@
       <file leaf-file-name="Rental.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/movie/Rental.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/movie/Customer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="95" column="8" lean-forward="true" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
+            <state relative-caret-position="233">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#560#561#0" expanded="true" />
-                <element signature="e#602#603#0" expanded="true" />
+                <element signature="e#367#368#0" expanded="true" />
+                <element signature="e#401#402#0" expanded="true" />
+                <element signature="e#424#425#0" expanded="true" />
+                <element signature="e#476#477#0" expanded="true" />
+                <element signature="e#499#500#0" expanded="true" />
+                <element signature="e#551#552#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/movie/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+            <state relative-caret-position="257">
+              <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#602#603#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,7 +113,10 @@
         <option value="$PROJECT_DIR$/src/com/movie/Main.java" />
         <option value="$PROJECT_DIR$/src/com/movie/Customer.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/movie/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/movie/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/movie/Rental.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/movie/Movie.java" />
       </list>
     </option>
   </component>
@@ -292,12 +285,12 @@
       <option name="presentableId" value="Default" />
       <updated>1573039031795</updated>
       <workItem from="1573039035945" duration="5918000" />
-      <workItem from="1573292555084" duration="12030000" />
+      <workItem from="1573292555084" duration="14424000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17948000" />
+    <option name="totallyTimeSpent" value="20342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -368,6 +361,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -380,37 +381,6 @@
             <element signature="e#560#561#0" expanded="true" />
             <element signature="e#602#603#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/movie/Movie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/movie/Rental.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/movie/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -461,14 +431,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/movie/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/movie/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="95" column="8" lean-forward="true" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
+        <state relative-caret-position="257">
+          <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#560#561#0" expanded="true" />
             <element signature="e#602#603#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/movie/Rental.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding>
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/movie/Movie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="53" column="17" lean-forward="true" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+          <folding>
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
+            <element signature="e#656#657#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
           </folding>
         </state>
       </provider>
