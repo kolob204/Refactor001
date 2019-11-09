@@ -50,14 +50,13 @@ public class Customer {
 
 
             // убрали временную переменную thisAmount,  и присваиваем выход each.getCharge(); там где это нужно - напрямую
+            //старайтесь избаляться от временных переменных
 
-// добавить очки для активного арендатора
-            frequentRenterPoints ++;
-// бонус за аренду новинки на два дня
-            if ((each.get_movie().get_priceCode() == Movie.NEW_RELEASE) &&
-                    each.get_daysRented() > 1) {
-                frequentRenterPoints ++;
-            }
+
+            //выделим так же начисление бонусов в отдельный метод. и поместим его в класс Rental, потому что
+            //в этом блоке логики идёт работа с переменными, относящимися к этому классу
+            frequentRenterPoints+=each.getfrequentRenterPoints();
+
 //показать результаты для этой аренды
             result += "\t" + each.get_movie().get_title()+ "\t" +
                     String.valueOf(each.getCharge()) + "\n";
