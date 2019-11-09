@@ -6,13 +6,12 @@ public class Rental {
     private int _daysRented;
 
     //конструктор
-
     public Rental(Movie movie, int daysRented) {
         this._movie = movie;
         this._daysRented = daysRented;
     }
 
-    public Movie get_movie() {
+    public Movie    get_movie() {
         return _movie;
     }
 

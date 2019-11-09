@@ -12,8 +12,10 @@ public class Customer {
         this._name = name;
     }
 
+    //Объект - Арендатор, будет список аренды
     public void addRental(Rental arg) {
-        _rentals addElement(arg);
+        //исправлена опечатка кода в книге
+        _rentals.addElement(arg);
     }
 
     public String get_name() {
@@ -35,7 +37,7 @@ public class Customer {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
         Enumeration rentals = _rentals.elements();
-        String result ="Учет аренды для" + get_name() + "\n";
+        String result ="Учет аренды для : " + get_name() + "\n";
         while (rentals.hasMoreElements()) {
             double thisAmount = 0;
             Rental each = (Rental) rentals.nextElement();
@@ -71,10 +73,10 @@ public class Customer {
         } // WHILE
 
 //добавить нижний колонтитул
-        result += "Сумма задолженности составляет" +
+        result += "Сумма задолженности составляет: " +
                 String.valueOf(totalAmount) + "\n";
         result += "Вы заработали " + String.valueOf(frequentRenterPoints) +
-"очков за активность";
+" очка(ов) за активность";
         return result;
 
     }  // statement()
