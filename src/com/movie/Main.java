@@ -11,9 +11,9 @@ public class Main {
         Customer c2 = new Customer("Jon Smith");
 
 
-        c1.addRental(new Rental(movie2,3));
-        c2.addRental(new Rental(movie1,5));
-        c1.addRental(new Rental(movie3,1));
+        c1.addRental(new Rental(movie2,5));
+        c2.addRental(new Rental(movie1,10));
+        c1.addRental(new Rental(movie3,4));
 
 
         System.out.println(c1.statement());

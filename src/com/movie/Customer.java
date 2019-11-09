@@ -2,6 +2,7 @@ package com.movie;
 
 import java.util.Enumeration;
 import java.util.Vector;
+import  com.movie.Rental;
 
 public class Customer {
     private String _name;
@@ -22,6 +23,10 @@ public class Customer {
         return _name;
     }
 
+    private int amountFor(Rental aRental) {
+        return aRental.getCharge();
+    }
+
     //(c) Если взглянуть на код,
     //можно увидеть, что невозможно повторно использовать текущий метод statement для создания отчета в HTML.
     //Можно просто скопировать метод statement и произвести необходимые изменения.
@@ -34,17 +39,17 @@ public class Customer {
     //структурирован удобным для добавления этой функциональности образом, сначала произведите рефакторинг
     //программы, чтобы упростить внесение необходимых изменений, а только потом добавьте функцию.
     public String statement() {
-        double totalAmount = 0;
+        int totalAmount = 0;
         int frequentRenterPoints = 0;
         Enumeration rentals = _rentals.elements();
         String result ="Учет аренды для : " + get_name() + "\n";
         while (rentals.hasMoreElements()) {
-            double thisAmount = 0;
+
             Rental each = (Rental) rentals.nextElement();
             //определить сумму для каждой строки
 
-            thisAmount = amountFor(each);
 
+            // убрали временную переменную thisAmount,  и присваиваем выход each.getCharge(); там где это нужно - напрямую
 
 // добавить очки для активного арендатора
             frequentRenterPoints ++;
@@ -55,8 +60,8 @@ public class Customer {
             }
 //показать результаты для этой аренды
             result += "\t" + each.get_movie().get_title()+ "\t" +
-                    String.valueOf(thisAmount) + "\n";
-            totalAmount += thisAmount;
+                    String.valueOf(each.getCharge()) + "\n";
+            totalAmount += each.getCharge();
         } // WHILE
 
 //добавить нижний колонтитул
@@ -68,27 +73,5 @@ public class Customer {
 
     }  // statement()
 
-    //выделяем блок с SWITCH в отдельный метод
-    private int amountFor(Rental each) {
-        int result=0;
-        switch (each.get_movie().get_priceCode()) {
-            //1 первым объектом для рефакторинга будет SWITCH оператор, который необходимо выделить в отдельный метод
-            case Movie.REGULAR:
-                result += 2;
-                if (each.get_daysRented() > 2){
-                    result += (each.get_daysRented() - 2) * 15;
-                }
-                break;
-            case Movie.NEW_RELEASE:
-                result += each.get_daysRented() * 3;
-                break;
-            case Movie.CHILDRENS:
-                result += 15;
-                if (each.get_daysRented() > 3){
-                    result += (each.get_daysRented() - 3) * 15;
-                }
-                break;
-        } //
-        return result;
-    }
+
 }
