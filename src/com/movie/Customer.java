@@ -41,24 +41,11 @@ public class Customer {
         while (rentals.hasMoreElements()) {
             double thisAmount = 0;
             Rental each = (Rental) rentals.nextElement();
-//определить сумму для каждой строки
-            switch (each.get_movie().get_priceCode()) {
-                case Movie.REGULAR:
-                    thisAmount += 2;
-                    if (each.get_daysRented() > 2){
-                        thisAmount += (each.get_daysRented() - 2) * 15;
-                    }
-                    break;
-                case Movie.NEW_RELEASE:
-                    thisAmount += each.get_daysRented() * 3;
-                    break;
-                case Movie.CHILDRENS:
-                    thisAmount += 15;
-                    if (each.get_daysRented() > 3){
-                        thisAmount += (each.get_daysRented() - 3) * 15;
-                    }
-                    break;
-            } //
+            //определить сумму для каждой строки
+
+            thisAmount = amountFor(each);
+
+
 // добавить очки для активного арендатора
             frequentRenterPoints ++;
 // бонус за аренду новинки на два дня
@@ -81,4 +68,27 @@ public class Customer {
 
     }  // statement()
 
+    //выделяем блок с SWITCH в отдельный метод
+    private int amountFor(Rental each) {
+        int result=0;
+        switch (each.get_movie().get_priceCode()) {
+            //1 первым объектом для рефакторинга будет SWITCH оператор, который необходимо выделить в отдельный метод
+            case Movie.REGULAR:
+                result += 2;
+                if (each.get_daysRented() > 2){
+                    result += (each.get_daysRented() - 2) * 15;
+                }
+                break;
+            case Movie.NEW_RELEASE:
+                result += each.get_daysRented() * 3;
+                break;
+            case Movie.CHILDRENS:
+                result += 15;
+                if (each.get_daysRented() > 3){
+                    result += (each.get_daysRented() - 3) * 15;
+                }
+                break;
+        } //
+        return result;
+    }
 }
