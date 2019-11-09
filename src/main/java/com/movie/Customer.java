@@ -1,8 +1,11 @@
 package com.movie;
 
+import org.apache.commons.io.FileUtils;
+
+import java.io.File;
+import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Vector;
-import  com.movie.Rental;
 
 public class Customer {
     private String _name;
@@ -41,7 +44,6 @@ public class Customer {
     //программы, чтобы упростить внесение необходимых изменений, а только потом добавьте функцию.
     public String statement() {
 
-        int frequentRenterPoints = 0;
         Enumeration rentals = _rentals.elements();
         String result ="Учет аренды для : " + get_name() + "\n";
         while (rentals.hasMoreElements()) {
@@ -58,7 +60,7 @@ public class Customer {
 
             //выделим так же начисление бонусов в отдельный метод. и поместим его в класс Rental, потому что
             //в этом блоке логики идёт работа с переменными, относящимися к этому классу
-            frequentRenterPoints+=each.getfrequentRenterPoints();
+
 
 //показать результаты для этой аренды
             result += "\t" + each.get_movie().get_title()+ "\t" +
@@ -68,14 +70,14 @@ public class Customer {
 
 //добавить нижний колонтитул
         result += "Сумма задолженности составляет: " +
-                String.valueOf(gettotalamount()) + "\n";
-        result += "Вы заработали " + String.valueOf(frequentRenterPoints) +
+                String.valueOf(gettotalcharge()) + "\n";
+        result += "Вы заработали " + String.valueOf(getfrequentRenterPoints()) +
 " очка(ов) за активность";
         return result;
 
     }  // statement()
 
-   int gettotalamount() {
+   int gettotalcharge() {
         int result=0;
        Enumeration rentals = _rentals.elements();
        while (rentals.hasMoreElements()) {
@@ -83,5 +85,38 @@ public class Customer {
            result+=each.getCharge();
        }
         return result;
+   }
+
+   int getfrequentRenterPoints() {
+        int result=0;
+       Enumeration rentals = _rentals.elements();
+       while (rentals.hasMoreElements()) {
+           Rental each = (Rental) rentals.nextElement();
+           result+=each.getfrequentRenterPoints();
+       }
+        return result;
+   }
+
+   //отчёт в HTML файл
+   public String HtmlStatement() {
+        Enumeration rentals = _rentals.elements();
+        String result = "<h1>Отчёт аренды для <EM>"+get_name()+"</EM></h1> \n";
+        while (rentals.hasMoreElements()) {
+            Rental rent = (Rental) rentals.nextElement();
+
+            result+="<p>"+ rent.get_movie().get_title() +" : "+ rent.getCharge()+"</p> \n";
+        }
+        result+="<b>Ваша задолженнность состовляет: <EM>"+gettotalcharge()+"</EM></b> <br>\n";
+        result+="Бонусные очки за текущую аренду: <EM>"+getfrequentRenterPoints()+"</EM></b> <br> \n";
+
+       File newHtmlFile = new File("HTML_report.html");
+       try {
+           FileUtils.writeStringToFile(newHtmlFile, result,"CP1251");
+
+       } catch (IOException e) {
+           e.printStackTrace();
+       }
+
+       return result;
    }
 }

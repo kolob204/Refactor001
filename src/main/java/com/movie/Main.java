@@ -16,9 +16,10 @@ public class Main {
         c1.addRental(new Rental(movie3,4));
 
 
-        System.out.println(c1.statement());
-        System.out.println();
-        System.out.println(c2.statement());
+       // System.out.println(c1.statement());
+       //  System.out.println();
+       // System.out.println(c2.statement());
 
+        System.out.println(c1.HtmlStatement());
     }
 }
