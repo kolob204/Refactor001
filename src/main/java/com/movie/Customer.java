@@ -112,8 +112,8 @@ public class Customer {
 
        File newHtmlFile = new File("HTML_report.html");
        try {
-           FileUtils.writeStringToFile(newHtmlFile, result,"CP1251");
-
+           //FileUtils.writeStringToFile();
+           FileUtils.write(newHtmlFile, result,"CP1251",true);
        } catch (IOException e) {
            e.printStackTrace();
        }

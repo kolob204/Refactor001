@@ -11,7 +11,7 @@ public class Main {
         Customer c2 = new Customer("Jon Smith");
 
         //формируются "закрывающие бух. документы" по всем прокатам
-        c1.addRental(new Rental(movie2,5));
+        c1.addRental(new Rental(movie1,5));
         c2.addRental(new Rental(movie1,10));
         c1.addRental(new Rental(movie3,4));
 
@@ -19,6 +19,10 @@ public class Main {
        // System.out.println(c1.statement());
        //  System.out.println();
        // System.out.println(c2.statement());
+
+        System.out.println(c1.HtmlStatement());
+
+        movie1.set_priceCode(Movie.REGULAR); // фильм изменил статус с новинки на обычный. и у него изменился ценник
 
         System.out.println(c1.HtmlStatement());
     }
