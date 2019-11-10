@@ -7,12 +7,13 @@ public class Movie {
     public static final int NEW_RELEASE = 1;
 
     private String  _title;
-    private int     _priceCode;
+    //private int     _priceCode;
+    private Price   _price;
 
     //конструктор
     public Movie(String title, int pricecode) {
         _title      = title;
-        _priceCode  = pricecode;
+        set_priceCode(pricecode);
     }
 
     public String get_title() {
@@ -23,42 +24,27 @@ public class Movie {
         this._title = _title;
     }
 
+    public void set_priceCode(int arg) {
+       switch (arg) {
+
+           case REGULAR:     _price = new RegularPrice();    break;
+           case CHILDRENS:   _price = new ChildrensPrice();  break;
+           case NEW_RELEASE: _price = new NewReleasePrice(); break;
+           default: throw new IllegalArgumentException("Incorrect Code");
+       }
+
+    } //set_priceCode  end_of
+
     public int get_priceCode() {
-        return _priceCode;
+        return   _price.getPriceCode();
     }
 
-    public void set_priceCode(int _priceCode) {
-        this._priceCode = _priceCode;
-    }
-
-    //перемещаем метод в соответствующий обрабатываемым параметрам класс
-    //так как в нём фигурирует только одна переменная из другого класса (_daysRented) . мы её передаём в качестве параметра из соответствующего
-    //класса RENTAL
     int getCharge(int _daysRented) {
-        int result=0;
-        switch (get_priceCode()) {
-            //1 первым объектом для рефакторинга будет SWITCH оператор, который необходимо выделить в отдельный метод
-            case Movie.REGULAR:
-                result += 2;
-                if (_daysRented  > 2){
-                    result += (_daysRented - 2) * 15;
-                }
-                break;
-            case Movie.NEW_RELEASE:
-                result += _daysRented * 3;
-                break;
-            case Movie.CHILDRENS:
-                result += 15;
-                if (_daysRented > 3){
-                    result += (_daysRented - 3) * 15;
-                }
-                break;
-        } //
-        return result;
+        return _price.getCharge(_daysRented);
     }
 
     int getfrequentRenterPoints(int _daysRented) {
-        if (_priceCode==Movie.NEW_RELEASE&&_daysRented>1) {return 2;}
+        if (get_priceCode()==Movie.NEW_RELEASE&&_daysRented>1) {return 2;}
         else {return 1;}
-    }   //getfrequentRenterPoints
+    }   //getfrequentRenterPoints end_of
 }
